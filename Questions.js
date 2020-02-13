@@ -64,3 +64,36 @@
 
 // b) 
 
+// c) Blank veut dire que un objet, array,  hash ou string est vide, il est present mais il contient rien. (une whitespace compte        comme blank dans un string).
+//    
+// Present veut dire qu'il y a qqchose dans un string, objet, hash ou array, c'est l'oppose de blank, quelque chose y est             present. (un whitespace dans un string compte comme present)
+
+//  Presence va retourne l'information a l'interieur de notre requete si elle est presente ou existante (un whispace compte pas) ex dans un object, array, etc, si il n'y a rien il va nous redonner nil. 
+
+
+
+// Question 15 
+
+//  Non ceci ne va pas executer le SQL statement immediatement, il a des fautes dans le code, il ne va pas 'run' les "" doivent se situer juste a l'entour de ce que l'on veut chercher de concret ex. on veut qu'il ai 17 ans Student.where(age: "17").take 
+//  Il faut aussi mettre les : apres le parametre du tableau ex nom, age, poids etc. 
+// Il faut aussi mettre .take pour recevoir cette information, on peut aussi mettre LIMIT 2 pour avoir exemple, les deux premier etc. 
+
+//  Nous devons faire 
+//  Student.where(name: "?").take 
+
+// Nous pouvons aussi faire la facon sql querry direct (plus longue et compliquer que la facon Active object)
+
+// def search 
+// ActiveRecord::Base.connection.execute("SELECT * FROM students WHERE students.name = '?'; ")
+// end
+
+
+//  Question 16 
+//  Si on utilise join dans students dans join(:classroom) nous allons joindre les tables de students et de classroom, toute l'information va y etre presente dans un seul tableau et nous pourrons l'utiliser et la gere comme on veut. mais si on a un loop par exemple un nouveau querry sera fait pour pouvoir faire l'association de l'information, dont utilise beaucoup de ressources de notre systeme pour rien.  
+
+// Dans le cas de includes la querry va une fois faire le querry pour retrouver l'information dans le SQL mais il le fera une fois car apres il n'aura pas de faire l'association il va juste aller chercher l'information une par une dans les deux tableaux. 
+//  
+
+
+// Question 17 
+//  
