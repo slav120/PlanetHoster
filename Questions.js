@@ -96,4 +96,19 @@
 
 
 // Question 17 
-//  
+// a)
+// Ce qui arrive c'est que l'on fait des "nested modules" on ajoute un niveau de complexiter a notre code. Ceci nous sert a organiser notre code, exemple on va nester le certains modules ensemble si par exemple on utilise cette partie du code juste la. Ruby aussi va en premier chercher l'infmation dans le module le plus interne et nested et apres vers les plus externes et ainsi de suite. On fait aussi juste renforcer le lien encore plus entre les deux modules.  
+
+// b) 
+// Notre terminal vas imprimer (puts, console.log) 
+// *manger vite* 
+// *manger trop*
+// *mmm, c'etait bon* 
+//  le output sinon de tout sa sera de nil 
+
+// c) La methode etendre ajoute le module specifie dans une classe specifique dans cete instance, c'est juste ici que l'on peut l'utiliser et non dans aucune autre instance de la meme dite classe. 
+
+//  la methode inclure ajoute le module que l'on a specifie dans la classe, le module sera maintenant present dans chacune des autres instances de cette classe et l'on pourra l'utiliser dans les autres instances. 
+
+// d) 
+// Le singleton est une classe ayant qu'une seule instance, il permet de restreindre la duplication de cette classe a un seul objet dans tout notre code.
