@@ -42,3 +42,25 @@
 
 // Pour le ActiveModel:: ForbiddenAttributesError dans le passer il fallait mettre params.require pour laisser Rails comprendre que nous avons besoins de cette parametre, il donne cette erreur car on a pas inscrit require apres le params, dans les nouvelles versions de rails on a pas besoin de mettre require, il comprend tout seul. 
 
+
+//  Question 12 
+
+// a) Nous pouvons utiliser Apache, Nginx, Mongrel, Phusion Passenger, Unicorn, Thin, Puma, WEBrick, Trinidad, TorqueBox comme serveurs 
+
+// b) 
+// Nous pouvons utiliser Apache et Nginx qui sont des serveurs web qui sont la pour servir notre application / website ils font la communication http de notre browser avec notre client qui est notre serveur. Nous devons par contre les configurer dans notre serveur pour qu'ils marchent en conjonction. 
+
+// Mongrel, Puma, Unicorn, Thin, Phusion Passenger sont tous des "applications servers" qui charge notre Ruby app a l'interieur de eux meme en utlisant les propre espace interne,  en utilisant un web socket nous pouvons les faire communiquer avec le browser. Ces serveurs ce chargent de convertir et transmettre l'information de notre Ruby app a reponse HTTP au Web socket qui est l'entre deux entre l'application server et l'internet (browser). 
+
+//  Chaque serveur est different, chacun supporte differente fonctionnalite, sert a different but, tout depend de la situation dans laquel on est pour savoir lequel utiliser.
+
+// c) 
+
+
+//  Question 14 
+
+// a) Les valeurs false dans ruby sont 'nil' et un boulean 'false' 
+  //  les valeurs en ruby qui retoure vrai (true) sont tous les chiffres (incluant 0), un empty string, hash et array sans rien. 
+
+// b) 
+
