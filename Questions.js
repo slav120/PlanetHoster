@@ -1,10 +1,29 @@
 
+// Question 1 
+//  Je vais creer une fonction que je vais appeler WordCount, elle va prendre comme parametre le string ou fichier que l'on veut, je vais retourner le fichier avec la fonction split sur tout les espace libre (" ") et ensuite faire .length pour retourner le nombre d'espace blanc, qui est le nombre de mots, 
+
+
+// Je vais creer une fonction que je vais appeler WordCount, comme parametres elle va prendre le string donc je veut compter le nombre de mots. a l'interieur de cette fonction creer une variable WordNumber qui va etre egale a 0, ensuite creer une loupe tres simpliste sur tout le string que nous avons, avec un if statement simple, a chauqe fois qu'il voit un espace (" ") il va faire WordNumber +1, a la fin quand le string va finir on va simplement retourner WordNumber et nous allons avoir notre reponse. 
+
+
+// Question 2  
+
+// Je vais creer une fonction qui va prendre comme parametres le texte ou string qui nous ai donner, a l'interieur creer une constante qui sera un objet vide, je vais faire une premiere loop qui va passer a travers chaque chaque mots dans notre string, il va le prendre et l'egaler a une clee dans notre objet ayant une valeur de 0, apres qu'il ai fini avec cette loop, je vais faire une deuxieme loop qui va comparer chaque cle dans notre object a chaque mots dans notre string (texte) a chaque fois que les deux sont egale je vais faire +1 a la valeur de la cle precise. quand la deuxieme loop sera completer, je vais juste retourner notre objet ou le console.log et nous pourrons vois chaque clee (mots) avec sa valeur (nombre de fois il apparait). 
+
+
+// Question 3
+//  Premiere fonction retournera un integer (ex: 5) 
+//  Deuxieme fonction retournera un object (ex:  {hello: 3, no: 5, this: 7}) etc.  
 
 
 // Question 4 
-
 // Ils servent a apporter divert fonctionnalite utile dans notre code (aplication) que l'on peut simplement appeler et les utiliser. 
 // Helpers en Ruby (Gems, on peut voir nos Gems installer dans Gemfile), Modules en Javascript on peut voir ce que l'on a dans Package.json. Ils sont la a nous simplifier le codage, et ajouter de la complexite dans notre application/code.   
+
+
+// Question 5  
+// Nous  voulons seulement que les routes de register et login soit utiliser si logged_in est false et on veut juste utiliser la route de logout (destroy) si logged_in est true pour que l'on puisse se logout. Nous devons faire un simple if statement pour verifier si la reponse est true ou false, si le if est true cela veut dire qu'on est loged in et c'est seulement a ce moment que nous voulons permettre de logout. Quand loged in est false c'est la le seul moment que nous voulont laisser le possibiliter de ce log in ou de register un nouveau compte. J'utiliserai un simple if a&.logged_in == false  ou a&.logged_in == true  et je continuerait le code apres pour faire ce que je desire selon la situation. ( je pourrait aussi faire avec un try  if a.try(:logged_in) == false)
+
 
 
 // Question 6 
@@ -12,6 +31,37 @@
 // Les ressources sont les chemins que notre code doit prendre, l'action (cheminement) qu'il doit prendre, c'est les actions que l'on veut prendre envers notre serveur, ce que l'on veut faire. ( ex: on veut GET /users/new  qui est le chemin a suivre a suivre pour atteindre cette information) 
 
 
+// Question 8 
+// a et b  
+//Cette fonction va stringify tout les cles des hash en strings, mais nous pouvons utiliser une maniere plus simple juste en utilisant hash.stringify_keys  qui est une fonction de Ruby qui nous fascilite la vie. Nous pouvons aussi faire l'inverse hash.symbolize._keys qui va rendre nos chars en cle. Il y a en bas les deux fonctions a ces buts.   
+// 
+// class ::Hash
+//  def convertir_cle_en_chars
+//   h = self.map do |k,v|
+//   v_str = if v.instance_of? Hash
+//      v.stringify_keys
+//      else
+//      v
+//      end
+
+//      [k.to_s, v_str]
+//     end
+//     Hash[h]
+//   end
+// 
+// def convertir_char_en_cle
+//   h = self.map do |k,v|
+//   v_sym = if v.instance_of? Hash
+//     v.symbol_keys
+//      else
+//         v
+//         end
+
+//         [k.to_sym, v_sym]
+//         end
+//         Hash[h]
+//   end
+// end
 
 // Question 9
 
@@ -62,7 +112,7 @@
 // a) Les valeurs false dans ruby sont 'nil' et un boulean 'false' 
   //  les valeurs en ruby qui retoure vrai (true) sont tous les chiffres (incluant 0), un empty string, hash et array sans rien. 
 
-// b) 
+// b) La methode try nous aide a simplifier notre code un peu, il nous permet t'utiliser des methodes sur un objet sans avoir peur que la reponse qui nous revien soit nil, bref comme la fonction est nomme elle s'essaye pour voir la valeur de l'objet, si il n'est pas nil la fonction continue, exemple dans un if statement, il va s'essaye si c'est true il va continue sinon il va skip. 
 
 // c) Blank veut dire que un objet, array,  hash ou string est vide, il est present mais il contient rien. (une whitespace compte        comme blank dans un string).
 //    
@@ -112,3 +162,6 @@
 
 // d) 
 // Le singleton est une classe ayant qu'une seule instance, il permet de restreindre la duplication de cette classe a un seul objet dans tout notre code.
+
+
+// Question 18  
