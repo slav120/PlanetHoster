@@ -1,19 +1,20 @@
 
 // Question 1 
-//  Je vais creer une fonction que je vais appeler WordCount, elle va prendre comme parametre le string ou fichier que l'on veut, je vais retourner le fichier avec la fonction split sur tout les espace libre (" ") et ensuite faire .length pour retourner le nombre d'espace blanc, qui est le nombre de mots, 
+// Je vais creer une fonction que je vais appeler WordCount, elle va prendre comme parametre le string ou fichier que l'on veut, je vais retourner le fichier avec la fonction split sur tout les espace libre (" ") et ensuite faire .length pour retourner le nombre d'espace blanc, qui est le nombre de mots, 
 
+// ou   
 
-// Je vais creer une fonction que je vais appeler WordCount, comme parametres elle va prendre le string donc je veut compter le nombre de mots. a l'interieur de cette fonction creer une variable WordNumber qui va etre egale a 0, ensuite creer une loupe tres simpliste sur tout le string que nous avons, avec un if statement simple, a chauqe fois qu'il voit un espace (" ") il va faire WordNumber +1, a la fin quand le string va finir on va simplement retourner WordNumber et nous allons avoir notre reponse. 
+// Je vais creer une fonction que je vais appeler WordCount, comme parametres elle va prendre le string donc je veut compter le nombre de mots,  l'interieur de cette fonction creer une variable WordNumber qui va etre egale a 0, ensuite creer un loop tres simpliste sur tout le string que nous avons, avec un if statement simple, a chauqe fois qu'il voit un espace (" ") il va faire WordNumber +1, a la fin quand le string va finir on va simplement retourner WordNumber et nous allons avoir notre reponse. 
 
 
 // Question 2  
 
-// Je vais creer une fonction qui va prendre comme parametres le texte ou string qui nous ai donner, a l'interieur creer une constante qui sera un objet vide, je vais faire une premiere loop qui va passer a travers chaque chaque mots dans notre string, il va le prendre et l'egaler a une clee dans notre objet ayant une valeur de 0, apres qu'il ai fini avec cette loop, je vais faire une deuxieme loop qui va comparer chaque cle dans notre object a chaque mots dans notre string (texte) a chaque fois que les deux sont egale je vais faire +1 a la valeur de la cle precise. quand la deuxieme loop sera completer, je vais juste retourner notre objet ou le console.log et nous pourrons vois chaque clee (mots) avec sa valeur (nombre de fois il apparait). 
+// Je vais creer une fonction qui va prendre comme parametres le texte ou string qui nous ai donner, a l'interieur creer une constante qui sera un objet vide, je vais faire un premier loop qui va passer a travers chaque chaque mots dans notre string, il va le prendre et l'egaler a une clee dans notre objet ayant une valeur de 0, apres qu'il ai fini avec cette loop, je vais faire une deuxieme loop qui va comparer chaque cle dans notre object a chaque mots dans notre string (texte) a chaque fois que les deux sont egale je vais faire +1 a la valeur de la cle precise. quand la deuxieme loop sera completer, je vais juste retourner notre objet et nous pourrons voir chaque clee (mots) avec sa valeur (nombre de fois il apparait). 
 
 
 // Question 3
-//  Premiere fonction retournera un integer (ex: 5) 
-//  Deuxieme fonction retournera un object (ex:  {hello: 3, no: 5, this: 7}) etc.  
+// Premiere fonction retournera un integer (ex: 5) 
+// Deuxieme fonction retournera un object (ex:  {bonjour: 3, tu: 5, je: 7}) etc.  
 
 
 // Question 4 
@@ -30,6 +31,36 @@
 
 // Les ressources sont les chemins que notre code doit prendre, l'action (cheminement) qu'il doit prendre, c'est les actions que l'on veut prendre envers notre serveur, ce que l'on veut faire. ( ex: on veut GET /users/new  qui est le chemin a suivre a suivre pour atteindre cette information) 
 
+
+// Question 7 
+
+// class Node
+//   # @param value [Integer]
+//   # @param next [Node]
+//   def initialize(value, next)
+//     @value = value
+//     @next = next
+//   end
+// end
+
+// class LinkedList
+//   attr_reader :first_node
+//   attr_reader :current_node
+
+
+
+// # @params values [Array<Integer>]
+//     def initialise(*values)
+//       list = LinkedList.new
+//       list.append(1)
+//       list.append(2)
+//       list.append(3)
+//       list.append(5)
+//       list.append(8)
+//       list.append(13)  
+//     end 
+
+//  Nous allons simplement append les valeurs que l'on veut a notre liste avec .append 
 
 // Question 8 
 // a et b  
@@ -104,8 +135,18 @@
 
 //  Chaque serveur est different, chacun supporte differente fonctionnalite, sert a different but, tout depend de la situation dans laquel on est pour savoir lequel utiliser.
 
-// c) 
+// c) server S1a
+//    Sla 1 requete 
+//    Slb 1 requete 
+//    Slc et Sld 0 requetes 
 
+
+//  serveur S2a 
+//  s2a 1 requete 
+//  s2b 1 requete 
+//  s2c, s2d, s1a, s1b, 0 requetes 
+
+//  Chaque 'worker' peut completer une requete a lui meme, alors les deux premiers prennent toujours les 2 requettes et le reste des workers n'on aucune requete a accomplirs, ils sont en attente de requetes. Chaque serveur a 4 workers dont si il y a deux requete seulement deux peuvent les accomplirs. 
 
 //  Question 14 
 
