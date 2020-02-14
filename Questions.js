@@ -137,15 +137,15 @@
 //  Chaque serveur est different, chacun supporte differente fonctionnalite, sert a different but, tout depend de la situation dans laquel on est pour savoir lequel utiliser.
 
 // c) server S1a
-//    Sla 1 requete 
-//    Slb 1 requete 
-//    Slc et Sld 0 requetes 
+//    Sla 1 requette 
+//    Slb 1 requette 
+//    Slc et Sld 0 requettes 
 
 
 //  serveur S2a 
-//  s2a 1 requete 
-//  s2b 1 requete 
-//  s2c, s2d, s1a, s1b, 0 requetes 
+//  s2a 1 requette 
+//  s2b 1 requette 
+//  s2c, s2d, s1a, s1b, 0 requettes 
 
 //  Chaque 'worker' peut completer une requete a lui meme, alors les deux premiers prennent toujours les 2 requettes et le reste des workers n'on aucune requete a accomplir, ils sont en attente de requettes. Chaque serveur a 4 workers dont si il y a deux requettes seulement deux peuvent les accomplirs et les autres attendent. 
 
@@ -209,3 +209,27 @@
 
 
 // Question 18  
+
+// Class Admin < ActiveRecord::Base 
+
+  // POST
+  // def create_or_update
+  // if a&.Utils.is_admin? == true
+  //  ( ici nous allons utiliser utils.log_admin_activity pour creer les logs dans les bases de donnes, si il a changer les modeles ou en a creer des neufs c'est ce que nous voulons creer ou ajouter dans notre base de donnees) 
+  // end 
+  // end 
+
+  // DELETE
+  // def destroy 
+  // if a&.Utils.is_admin? == true
+  // Utils.log_admin_activity[:data] = nil 
+  // end 
+  // end 
+
+  //  Dans le create (post) nous voulons verifier grace a Utils.is_admin? si c'est true, si c'est le cas cela veut dire que c'est un admin et quelqun qui a modifier des modeles, nous allons suivre cette route pour create ou update dans notre base de donne, en premier on va verifier si celle existe dans la base, si cella existe deja, nous allons update en reecrivant par dessus avec Utils.log_admin_activity qui la mettera a jour. Si ce log n'existe pas nous allons simplement en creer un avec les donners qui se trouve dans Utils.log_admin_activity. ( il pourrait aussi comparer les resulat et changer les valeurs differentes dans la base de donnes mais cela sera beaucoup plus le que en les reecrivant, mais sa serait la maniere aproprier de le faire selon moi) 
+  
+  //  Dans le destroy (delete) nous voulons en premier bien evidement verifier si la personne est un admin ou non avant de lui donner le droit d'effacer l'information dans notre base de donnees. Si cella est le cas et il veut Delete nous allons simplement rendre les donnes dans cette cle, log de donne Nil pour efface l'information. 
+
+  // Nous pouvons utiliser 
+  // validates: Utils.is_admin?: true  en haut juste avant de faire les fonctions (def) dans la Classe pour pouvoir nous assurer que tout les fonctions a l'interne fonctionne seulement si c'est un admin, ou en if statements dans chaque fonction dans la classe. 
+  
